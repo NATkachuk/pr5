@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pr5</title>
+  </head>
+  <body>
+    <script language="JavaScript" type="text/javascript">
+      var x_min = parseFloat(
+        prompt("Введіть мінімальне значення аргументу х: ")
+      );
+      var x_max = parseFloat(
+        prompt("Введіть максимальне значення аргументу х: ")
+      );
+      var h = parseFloat(prompt("Введіть крок зміни аргументу х: "));
+      var x, V;
+
+      document.write("<h4>РОЗГАЛУЖЕНИЙ ОБЧИСЛЮВАЛЬНИЙ ПРОЦЕС</h4>");
+      if (x_min && x_max && x_min <= x_max) {
+        document.write(
+          "<p>Обчислення значень функції при зміні аргументу х від " +
+            x_min +
+            " до " +
+            x_max +
+            " із кроком " +
+            h +
+            "</p>"
+        );
+      } else {
+        document.write("<p>Некоректні дані</p>");
+      }
+
+      for (x = x_min; x <= x_max; x += h) {
+        with (Math) {
+          if (x < 2) {
+            V = cos(4 * x) - PI;
+          } else if (x == 2) {
+            V = pow(abs(1 / tan(x)), 3);
+          } else if (x > 2) {
+            V = 5 + cbrt(x);
+          }
+        }
+        document.write("<p>x = " + x + "; V = " + V + "</p>");
+      }
+    </script>
+  </body>
+</html>

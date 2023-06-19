@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pr5</title>
+    <style>
+      input {
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script language="JavaScript" type="text/javascript">
+      function ShowVysliv(autor_number) {
+        var vysliv;
+        switch (autor_number) {
+          case 1:
+            vysliv = "Борітеся — поборете!";
+            break;
+          case 2:
+            vysliv =
+              "Люблять батьківщину не за те, що вона велика, а за те, що своя";
+            break;
+          case 3:
+            vysliv =
+              "І дим батьківщини солодкий.";
+            break;
+          case 4:
+            vysliv = "Той, хто не любить своєї країни, нічого любити не може ";
+            break;
+          case 5:
+            vysliv = "Кожному мила своя сторона.";
+            break;
+        }
+
+        alert(vysliv);
+      }
+      document.write(
+        "<h1>Про батьківщину та патріотизм. Про рідну мову, українську пісню.</h1>" +
+          '<input type="button" onclick="ShowVysliv(1);" value=" Т. Шевченко">' +
+          '<input type="button" onclick="ShowVysliv(2);" value="Сенека">' +
+          '<input type="button" onclick="ShowVysliv(3);" value="Овідій ">' +
+          '<input type="button" onclick="ShowVysliv(4);" value="Д. Байрон">' +
+          '<input type="button" onclick="ShowVysliv(5);" value="Г. Сковорода ">'
+      );
+    </script>
+  </body>
+</html>
